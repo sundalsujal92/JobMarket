@@ -1,0 +1,36 @@
+<div class="freelancer-page">
+    <!-- Freelancer Info -->
+    <div class="freelancer-header">
+        <div class="profile-pic">
+            <img [src]="freelancerInfo.profilePicture" alt="Profile Picture">
+        </div>
+        <h1>{{ freelancerInfo.name }}</h1>
+        <h3>{{ freelancerInfo.profession }}</h3>
+        <p class="bio">{{ freelancerInfo.description }}</p>
+        <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:{{ freelancerInfo.contact.email }}">{{ freelancerInfo.contact.email }}</a></p>
+            <p><strong>Phone:</strong> <a href="tel:{{ freelancerInfo.contact.phone }}">{{ freelancerInfo.contact.phone }}</a></p>
+            <p><strong>LinkedIn:</strong> <a href="{{ freelancerInfo.contact.linkedin }}" target="_blank">View Profile</a></p>
+            <p><strong>GitHub:</strong> <a href="{{ freelancerInfo.contact.github }}" target="_blank">View Portfolio</a></p>
+        </div>
+    </div>
+
+    <!-- Freelancer Services -->
+    <div class="services">
+        <h2>Services I Offer</h2>
+        <div class="service-cards">
+            <div *ngFor="let service of freelancerInfo.services" class="service-card">
+                <img [src]="service.icon" alt="{{ service.name }} Icon" class="service-icon">
+                <h3>{{ service.name }}</h3>
+                <p>{{ service.description }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta">
+        <h2>Ready to work with me?</h2>
+        <p>Let's create something amazing together! Get in touch today.</p>
+        <button class="contact-button" onclick="window.location.href='/contact'">Contact Me</button>
+    </div>
+</div>

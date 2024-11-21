@@ -1,0 +1,10 @@
+<div *ngIf="user; else loginPrompt">
+    <!-- This content will only render if `user` is not null -->
+    <h2>Welcome, {{ user?.displayName }}</h2>
+    <button (click)="logOut()">Log Out</button>
+  </div>
+  <ng-template #loginPrompt>
+    <!-- Content shown if user is null -->
+    <p>Please log in to access your dashboard.</p>
+  </ng-template>
+  

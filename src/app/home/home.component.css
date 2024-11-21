@@ -1,0 +1,121 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-image: url('assets/background.jpg'); /* Keep your background image */
+  background-size: cover;
+  background-position: center;
+  color: #333;
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  min-height: 500px; /* Ensures the hero section has a minimum height */
+}
+
+.hero-content {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds shadow to text for better readability */
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Shadow for description text */
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.search-item mat-form-field {
+  width: 250px;
+  margin: 10px;
+}
+
+.search-box button {
+  margin-top: 20px;
+}
+
+/* Statistics Section */
+.statistics {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.statistics .stat-item {
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7); /* Slight background for readability */
+  border-radius: 8px;
+}
+
+.statistics h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.statistics p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Button Hover Effect */
+button.mat-raised-button:hover {
+  background-color: #ff4081 !important;
+  color: white !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 15px; /* Less padding on smaller screens */
+  }
+
+  .hero h1 {
+    font-size: 2rem; /* Make the headline smaller on mobile */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Reduce the paragraph size */
+  }
+
+  .search-box {
+    flex-direction: column; /* Stack search fields on mobile */
+    gap: 15px;
+  }
+
+  .statistics {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .statistics .stat-item {
+    width: 100%; /* Make statistics sections full width on small screens */
+  }
+}

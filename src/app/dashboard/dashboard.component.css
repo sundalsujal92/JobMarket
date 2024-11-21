@@ -1,0 +1,54 @@
+.dashboard-container {
+    text-align: center;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    color: #4CAF50;
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    color: #333;
+    font-size: 1.8em;
+  }
+  
+  p {
+    font-size: 1.2em;
+    color: #555;
+  }
+  
+  button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #d32f2f;
+  }
+  
+  @media (max-width: 600px) {
+    .dashboard-container {
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 2em;
+    }
+  
+    h2 {
+      font-size: 1.5em;
+    }
+  
+    p {
+      font-size: 1em;
+    }
+  }
+  

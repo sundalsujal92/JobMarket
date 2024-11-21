@@ -1,0 +1,54 @@
+/* Styling the toolbar */
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #1976d2; /* Primary color */
+}
+
+.header .logo img {
+  width: 40px; /* Adjust size */
+  height: 40px; /* Adjust size */
+  border-radius: 50%; /* Optional, to make the logo round */
+}
+
+.spacer {
+  flex-grow: 1; /* Push elements to the left and right */
+}
+
+button.mat-button {
+  color: white;
+  font-size: 16px;
+  margin: 0 10px;
+  transition: background-color 0.3s;
+}
+
+/* Style for buttons on hover */
+button.mat-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Style for icon buttons */
+button.mat-icon-button {
+  color: white;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for icon buttons */
+button.mat-icon-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Ensure the toolbar is responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button.mat-button {
+    margin: 5px 0;
+  }
+}

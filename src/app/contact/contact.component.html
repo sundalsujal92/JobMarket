@@ -1,0 +1,30 @@
+<div class="contact-form">
+  <h2>Contact Us</h2>
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+      <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" ngModel required>
+          <div *ngIf="contactForm.submitted && !contactForm.controls['name']?.valid" class="error">
+              Name is required.
+          </div>
+      </div>
+      
+      <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" ngModel required email>
+          <div *ngIf="contactForm.submitted && !contactForm.controls['email']?.valid" class="error">
+              A valid email is required.
+          </div>
+      </div>
+      
+      <div>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" ngModel required></textarea>
+          <div *ngIf="contactForm.submitted && !contactForm.controls['message']?.valid" class="error">
+              Message is required.
+          </div>
+      </div>
+
+      <button type="submit" [disabled]="contactForm.invalid">Send Message</button>
+  </form>
+</div>
